@@ -1,0 +1,9 @@
+{
+    "name": "mrchangizi/oop-php",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "require": {}
+}

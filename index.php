@@ -1,13 +1,11 @@
 <?php
 
-$host = 'localhost';
-$dbName = 'oop';
-$username = 'root';
-$password = '';
+/*
+ *  autoload
+ */
+require_once __DIR__."/vendor/autoload.php";
 
-try {
-    $conn = new PDO("mysql:host=$host;dbname=$dbName", $dbName, $username,  $password);
-}
-catch (Exception $e) {
-    echo $e->getMessage();
-}
+
+use app\core\Application;
+
+$app = new Application();
