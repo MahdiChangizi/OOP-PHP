@@ -1,12 +1,12 @@
 <?php
-require_once __DIR__ . "/../vendor/autoload.php";
 
+
+require_once __DIR__ . "/../vendor/autoload.php";
 use app\core\Application;
 
-$app = new Application();
+$app = new Application(dirname(__DIR__));
 
-$app->router->get('/ali', function (){
-    return 'get mahdi';
-});
+$app->router->get('/ali', [\app\controller\siteController::class, 'index']);
+$app->router->get('/', 'index');
 
 $app->run();
