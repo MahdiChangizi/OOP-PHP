@@ -6,7 +6,7 @@ use app\core\Controller;
 
 class siteController extends Controller
 {
-    public function index(): string
+    public function index()
     {
         return $this->view('_404');
     }
